@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <link href="https://fonts.google.com/share?selection.family=Montserrat:ital,wght@0,100..900;1,100..900" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Welcome, {{ username }}</h1>
+    <p>Your current balance is: ${{ balance }}</p>
+    <form action="/deposit" method="post">
+        <input type="number" name="amount" placeholder="Amount to deposit">
+        <button type="submit">Deposit</button>
+    </form>
+    <form action="/withdraw" method="post">
+        <input type="number" name="amount" placeholder="Amount to withdraw">
+        <button type="submit">Withdraw</button>
+    </form>
+    <a href="/transactions">View Transaction History</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>

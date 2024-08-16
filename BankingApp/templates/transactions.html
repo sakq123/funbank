@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction History</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <link href="https://fonts.google.com/share?selection.family=Montserrat:ital,wght@0,100..900;1,100..900" rel="stylesheet">
+</head>
+<body>
+    <h1>Transaction History</h1>
+    <ul>
+        {% for type, amount in transactions %}
+            <li>{{ type }} of ${{ amount }}</li>
+        {% else %}
+            <li>No transactions found.</li>
+        {% endfor %}
+    </ul>
+    <a href="/home">Back to Home</a>
+</body>
+</html>
